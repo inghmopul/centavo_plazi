@@ -1,0 +1,70 @@
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--centavo-bg);
+  color: var(--centavo-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: var(--centavo-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Clases utilitarias de estructura */
+.centavo-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.centavo-card {
+  background-color: var(--centavo-surface);
+  border: 1px solid var(--centavo-border);
+  border-radius: var(--centavo-radius-md);
+  box-shadow: var(--centavo-shadow-sm);
+}
+
+.centavo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--centavo-radius-full);
+}
+
+.centavo-badge-copper {
+  background-color: var(--centavo-copper-light);
+  color: var(--centavo-copper);
+}
+
+.centavo-badge-primary {
+  background-color: var(--centavo-primary-light);
+  color: var(--centavo-primary-hover);
+}
