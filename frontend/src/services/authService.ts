@@ -9,7 +9,7 @@ export const authService = {
     try {
       // Intento contra el servicio auth-service
       const response = await apiClient.post<AuthResponse | { data: AuthResponse }>('/auth/login', credentials);
-      const authData = 'data' in response && response.data ? response.data : response;
+      const authData: AuthResponse = 'data' in response ? response.data : response;
       localStorage.setItem(TOKEN_KEY, authData.token);
       localStorage.setItem(USER_KEY, JSON.stringify(authData.user));
       return authData;
